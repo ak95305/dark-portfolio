@@ -6,12 +6,37 @@
           box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
+  color: #fff;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: #fff;
+}
+
+img {
+  width: 100%;
+}
+
+.transition-fade {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
 }
 
 .above-the-fold {
   background: radial-gradient(32.66% 57.85% at 50% 50%, #2E2F49 0%, #26273A 100%);
   min-height: 100vh;
   padding: 0 20px;
+  overflow: hidden;
 }
 
 /*HEADER CSS*/
@@ -43,7 +68,7 @@ header .cta a {
   background-color: #FF8484;
 }
 
-/*HERO SECTION*/
+/*MAIN SECTION*/
 .hero-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -197,6 +222,89 @@ header .cta a {
   z-index: 2;
 }
 
+/* WORK PAGE */
+.project-head h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #fff;
+  font-weight: 700;
+}
+
+.project-head h4 {
+  font-size: 1.25em;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #FF8484;
+  font-weight: 700;
+}
+
+.project-head p {
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #fff;
+  font-weight: 500;
+  max-width: 400px;
+}
+
+.project-head .tag {
+  font-size: 0.9em;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #fff;
+  font-weight: 500;
+  padding: 5px 15px;
+  background-color: #FF8484;
+  display: inline-block;
+  border-radius: 50px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+.project-head .tag:not(:nth-child(1)) {
+  background-color: #ffffff45;
+}
+
+.project-list {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.project-card {
+  background-color: #FFF9F4;
+  padding: 30px;
+  margin: 15px 0;
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.project-card h1 {
+  font-size: 1.25em;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #333;
+  font-weight: 700;
+}
+
+.project-card p {
+  font-size: 0.9em;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #666;
+  font-weight: 600;
+}
+
+/* ANIMATIONS KEYFRAMES */
 @-webkit-keyframes float {
   0% {
     -webkit-transform: translateY(0px);
@@ -211,7 +319,6 @@ header .cta a {
             transform: translateY(0px);
   }
 }
-
 @keyframes float {
   0% {
     -webkit-transform: translateY(0px);
